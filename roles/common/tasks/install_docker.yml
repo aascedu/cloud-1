@@ -1,7 +1,5 @@
 ---
 - hosts: all
-  become: true
-
   tasks:
     - name: Install aptitude
       apt:

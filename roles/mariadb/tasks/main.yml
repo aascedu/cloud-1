@@ -1,0 +1,9 @@
+---
+- name: Database
+  import_tasks: database.yml
+
+- name: Wordpress
+  import_tasks: app.yml
+
+- name: NGINX
+  import_tasks: webserver.yml
