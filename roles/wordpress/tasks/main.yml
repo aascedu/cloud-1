@@ -1,3 +1,11 @@
 ---
-- name: Wordpress
-  import_tasks: wordpress.yml
+# - name: Wordpress
+#   import_tasks: wordpress.yml
+
+- name: Copy Wordpress files
+  ansible.builtin.copy:
+    src: ./
+    dest: /opt/cloud-1/wordpress/
+    owner: ubuntu
+    group: ubuntu
+    mode: '0644'

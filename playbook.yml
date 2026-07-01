@@ -3,8 +3,13 @@
     - name: TEST
       ansible.builtin.debug:
         msg: TEST
+
+- hosts: all
   roles:
     - common
-    # - mariadb
-    # - wordpress
-    # - nginx
+    - mariadb
+    - wordpress
+    - nginx
+
+# Roles first.
+# Different - hosts... gives possibility to order actions.

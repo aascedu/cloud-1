@@ -27,7 +27,7 @@ services:
     container_name: wordpress
     networks:
       - inception
-    env_file: env/wordpress.env
+    env_file: wordpress/wordpress.env
     build:
       context: ./wordpress
       dockerfile: Dockerfile
@@ -44,7 +44,7 @@ services:
     container_name: mariadb
     networks:
       - inception
-    env_file: env/mariadb.env
+    env_file: mariadb/mariadb.env
     build:
       context: ./mariadb
       dockerfile: Dockerfile

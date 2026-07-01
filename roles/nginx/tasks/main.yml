@@ -1,3 +1,11 @@
 ---
-- name: NGINX
-  import_tasks: nginx.yml
+# - name: NGINX
+#   import_tasks: nginx.yml
+
+- name: Copy NGINX files
+  ansible.builtin.copy:
+    src: ./
+    dest: /opt/cloud-1/nginx/
+    owner: ubuntu
+    group: ubuntu
+    mode: '0644'
