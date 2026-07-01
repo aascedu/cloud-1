@@ -1,0 +1,30 @@
+---
+# - name: Install Docker
+#   import_tasks: docker.yml
+
+- name: Create cloud-1 directory
+  become: true
+  ansible.builtin.file:
+    path: /opt/cloud-1
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    mode: '0755'
+
+- name: Create work directories in /opt/cloud-1/
+  ansible.builtin.file:
+    path: "/opt/cloud-1/{{item}}"
+    state: directory
+    mode: '0755'
+  loop:
+    - mariadb
+    - wordpress
+    - nginx
+
+- name: Copy docker-compose.yml file to work cloud-1 directory
+  ansible.builtin.copy:
+    src: docker-compose.yml
+    dest: /opt/cloud-1/docker-compose.yml
+    owner: ubuntu
+    group: ubuntu
+    mode: '0644'
