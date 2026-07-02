@@ -1,15 +1,14 @@
 - hosts: all
-  tasks:
-    - name: TEST
-      ansible.builtin.debug:
-        msg: TEST
-
-- hosts: all
   roles:
     - common
     - mariadb
     - wordpress
     - nginx
 
-# Roles first.
-# Different - hosts... gives possibility to order actions.
+- hosts: all
+  tasks:
+  - name: Create and start services
+    community.docker.docker_compose_v2:
+      project_src: /opt/cloud-1
+      build: always
+    register: output

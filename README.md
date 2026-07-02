@@ -1,10 +1,13 @@
 # cloud-1
 This project is an automated deployment of [Inception](https://github.com/aascedu/Inception) on a remote server.  
-Personnaly, I needed to host a website for my dad which is a golf instructor, so I decided to merge both projects. The final website might not be a wordpress website.
+The project is quite irrelevant to deploying Inception, it is kind of useless to use ansible to deploy a dockerized LEMP stack website.
+We don't use the full extent, nor the half extent of Ansible with this.  
+It's sad that it is mandatory to do that on a cloud machine because if we could setup 3-4 super lightweight VMs (with different OS) and provision them differently
+to learn the "true" use of Ansible it would IMO be more beneficial.  
+Anyhow...
 
-## Table of Contents (branches)
+## Table of Contents
 
-- [AP Golf Website]()
 - [42 cloud-1 Project]()
 
 ## How to run the project

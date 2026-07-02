@@ -66,10 +66,10 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: /home/ubuntu/data/wordpress
+      device: /opt/cloud-1/data/wordpress
   mariadb:
     driver: local
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: /home/ubuntu/data/mariadb
+      device: /opt/cloud-1/data/mariadb

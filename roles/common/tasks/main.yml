@@ -20,6 +20,8 @@
     - mariadb
     - wordpress
     - nginx
+    - data/wordpress
+    - data/mariadb
 
 - name: Copy docker-compose.yml file to work cloud-1 directory
   ansible.builtin.copy:
