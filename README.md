@@ -1,5 +1,5 @@
 # cloud-1
-This project is an automated deployment of [Inception](https://github.com/aascedu/Inception) on a remote server.  
+This project is an automated deployment of a custom [Inception](https://github.com/aascedu/Inception) like project on a remote server.  
 The project is quite irrelevant to deploying Inception, it is kind of useless to use ansible to deploy a dockerized LEMP stack website.
 We don't use the full extent, nor the half extent of Ansible with this.  
 It's sad that it is mandatory to do that on a cloud machine because if we could setup 3-4 super lightweight VMs (with different OS) and provision them differently
@@ -18,3 +18,4 @@ Anyhow...
 
 ## Authors
 - [Arthur ASCEDU](https://github.com/aascedu)
+- [Tanguy GELLON](https://github.com/tang1304)
