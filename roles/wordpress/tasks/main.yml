@@ -9,3 +9,11 @@
     owner: ubuntu
     group: ubuntu
     mode: '0644'
+
+- name: Build and start wordpress
+  community.docker.docker_compose_v2:
+    project_src: /opt/cloud-1
+    services:
+      - wordpress
+    build: always
+    state: present

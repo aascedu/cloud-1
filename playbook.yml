@@ -4,11 +4,4 @@
     - mariadb
     - wordpress
     - nginx
-
-- hosts: all
-  tasks:
-  - name: Create and start services
-    community.docker.docker_compose_v2:
-      project_src: /opt/cloud-1
-      build: always
-    register: output
+    - phpmyadmin

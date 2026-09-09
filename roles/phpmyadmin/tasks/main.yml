@@ -1,0 +1,7 @@
+- name: Build and start phpmyadmin
+  community.docker.docker_compose_v2:
+    project_src: /opt/cloud-1
+    services:
+      - phpmyadmin
+    build: always
+    state: present

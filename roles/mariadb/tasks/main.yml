@@ -9,3 +9,11 @@
     owner: ubuntu
     group: ubuntu
     mode: '0644'
+
+- name: Build and start mariadb
+  community.docker.docker_compose_v2:
+    project_src: /opt/cloud-1
+    services:
+      - mariadb
+    build: always
+    state: present
