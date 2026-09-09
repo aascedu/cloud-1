@@ -1,10 +1,4 @@
 ---
-# - name: Install aptitude
-#   apt:
-#     name: aptitude
-#     state: latest
-#     update_cache: true
-
 - name: Install required system packages
   apt:
     pkg:
@@ -51,3 +45,6 @@
     name: ubuntu
     groups: docker
     append: yes
+
+- name: Reset SSH connection
+  ansible.builtin.meta: reset_connection

@@ -1,6 +1,7 @@
 ---
-# - name: Install Docker
-#   import_tasks: docker.yml
+- name: Install Docker
+  become: true
+  import_tasks: docker.yml
 
 - name: Create cloud-1 directory
   become: true

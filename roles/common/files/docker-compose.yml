@@ -1,5 +1,3 @@
-version: '3'
-
 networks:
   inception:
     name: inception
@@ -59,6 +57,21 @@ services:
       interval: 10s
       timeout: 5s
       retries: 3
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    networks:
+      - inception
+    image: phpmyadmin:5
+    restart: always
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+    expose:
+      - "80"
 
 volumes:
   wordpress:
